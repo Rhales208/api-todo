@@ -8,9 +8,9 @@ app.use(cors());
 app.use(express.json())//tells express to use json parser
 
 //routes
-// app.post('/tasks', createTask);//posts
+app.post('/tasks', createTask);//posts
 app.get('/tasks', getTasks);//get all tasks
-// app.patch('/tasks/:taskId', updateTask );//marks tasks as done, only 1
+app.patch('/tasks/:taskId', updateTask);//marks tasks as done, only 1
 
 app.listen(PORT, () => {
 console.log('Listening on Port: ', PORT)
